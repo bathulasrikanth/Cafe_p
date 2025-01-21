@@ -1,0 +1,74 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Page Title */
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Results List */
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+}
+
+
+
+ul li:hover {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+/* Product Image */
+ul li img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Product Price */
+ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #007bff;
+    font-weight: bold;
+    display: block;
+    margin: 10px 0;
+    transition: color 0.3s ease;
+}
+
+ul li a:hover {
+    color: #0056b3;
+}
+
+/* No Results Message */
+p {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #666;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    ul li {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+}

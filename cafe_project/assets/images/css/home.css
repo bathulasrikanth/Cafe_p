@@ -1,0 +1,22 @@
+.navbar {
+    background: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+    backdrop-filter: blur(5px); /* Blur effect */
+}
+.image-container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.image-container img {
+    width: 100%;
+    height: 650px;
+    object-fit: cover;
+}
+.image-container .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);

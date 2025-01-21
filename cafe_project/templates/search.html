@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+</head>
+{% include 'nav.html' %}
+<body>
+    <link href="{% static 'images/css/search.css' %}" rel="stylesheet"> 
+
+
+<h1>Search Results for "{{ query }}"</h1>
+
+{% if results %}
+    <ul>
+        {% for product in results %}
+            <li>
+                <a href="{% url 'product' product.id %}">            <img src="{{ product.image.url }}" alt="coffee" width="250px" height="200px" class="img"><br>
+                </a>
+                - ${{ product.price }}
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No results found.</p>
+{% endif %}
+</body>
+</html>

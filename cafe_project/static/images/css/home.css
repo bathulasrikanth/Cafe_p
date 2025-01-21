@@ -1,0 +1,163 @@
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* Image Container */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 650px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-container .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 5px black;
+}
+
+.image-container .text h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.image-container .text p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.image-container .btn {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+
+}
+a .btn{
+    margin: 5%;
+    
+}
+
+
+
+/* Section: Indoor & Dining */
+.container {
+    text-align: center;
+    margin: 50px auto;
+}
+
+.container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.container p {
+    font-size: 1.2rem;
+    color: #666;
+    margin: 5px 0;
+}
+
+.container hr {
+    margin: 20px auto;
+    border: 0;
+    border-top: 2px solid #ddd;
+}
+
+.container .btn {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Carousel Styling */
+.carousel-inner img {
+    height: 650px;
+    object-fit: cover;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1); /* Makes controls visible on dark images */
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1rem;
+}
+
+.footer a {
+    color: #f8f8f8;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #ff8c00;
+}
+
+.footer .social-icons a {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+    transform: scale(1.2);
+    color: #ff8c00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .image-container .text h1 {
+        font-size: 3rem;
+    }
+
+    .image-container .text p {
+        font-size: 1.2rem;
+    }
+
+    .container h1 {
+        font-size: 2rem;
+    }
+
+    .container p {
+        font-size: 1rem;
+    }
+
+    .footer {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-container .text h1 {
+        font-size: 2.5rem;
+    }
+
+    .image-container .text p {
+        font-size: 1rem;
+    }
+
+    .container h1 {
+        font-size: 1.8rem;
+    }
+}

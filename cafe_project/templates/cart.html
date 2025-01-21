@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+    <link rel="stylesheet" href="{% static 'images/css/cart.css' %}">
+
+</head>
+<body>
+    <!-- Include navigation bar -->
+    {% include 'nav.html' %}
+
+
+
+<div class="table">
+    
+  {% if cart_items %}
+    <h2>Your Cart</h2>
+    <h3>Total: {{ total }}</h3>
+    <table border="1" class="th">
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+
+        </tr>
+
+    {% for item in cart_items %}
+    <tr>
+        <td>
+            {% if item.product %}
+                <img src="{{ item.product.image.url }}" alt="Item Image" width="100px">
+            {% elif item.cool_drink %}
+                <img src="{{ item.cool_drink.image.url }}" alt="Item Image" width="100px">
+            {% endif %}
+        </td>       <td>
+            {% if item.product %}
+                {{ item.product.title }}
+            {% elif item.cool_drink %}
+                {{ item.cool_drink.title }}
+            {% endif %}
+        </td>
+        <td>{{ item.quantity }}</td>
+        <td>{{ item.product.total_price}}</td>
+        <td><a href="{% url 'delete' item.id %}" class="btn btn-outline-success">Remove Item</a></td>
+    </tr>
+
+    {% endfor %}
+</table>
+{{ message }}
+
+    <a href="#" class="btn btn-outline-success" id="check">Checkout</a>
+{% else %}
+    <h2>Your cart is empty.</h2>
+    <a href="{% url 'menu' %}" class="btn btn-outline-success">Go to Menu</a>
+{% endif %}
+</div>
+
+</body>
+</html>
+
+

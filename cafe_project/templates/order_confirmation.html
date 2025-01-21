@@ -1,0 +1,15 @@
+{% extends 'home.html' %}
+
+{% block content %}
+<h2>Order Confirmed</h2>
+<p>Thank you for your order! Your food will be served shortly.</p>
+<p>Reservation Table: {{ order.reservation.table_number }}</p>
+<p>Total Price: ₹{{ order.total_price }}</p>
+<p>Ordered Items:</p>
+<ul>
+    {% for item in order.items.all %}
+        <li>{{ item.name }} - ₹{{ item.price }}</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'home' %}" class="btn btn-success">Back to Home</a>
+{% endblock %}

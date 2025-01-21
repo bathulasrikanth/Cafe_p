@@ -1,0 +1,66 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Category Section Styling */
+.first, .first1, .first2, .first3 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.first h1, .first1 h1, .first2 h1, .first3 h1 {
+    font-size: 2rem;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Image Container Styling */
+.second, .second1, .second2, .second3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+/* Image Styling */
+.second img, .second1 img, .second2 img, .second3 img {
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.second img:hover, .second1 img:hover, .second2 img:hover, .second3 img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .second img, .second1 img, .second2 img, .second3 img {
+        width: 90%;
+        height: auto;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .second img, .second1 img, .second2 img, .second3 img {
+        width: 100%;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
